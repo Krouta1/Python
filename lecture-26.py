@@ -1,13 +1,15 @@
-#random module
-import random
-
-x = random.randint(1, 6)
-y = random.random()
-
-myList =['rock', 'paper', 'scissors']
-z=random.choice(myList)
-
-cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
-random.shuffle(cards)
-
-print(cards)
+#exception handeling
+try:
+    numerator = int(input("Enter the numerator: "))
+    denominator = int(input("Enter the denominator: "))
+    result = numerator / denominator
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except ValueError:
+    print("Please enter a valid number!")
+except Exception as e:
+    print("Error: ", e)
+else:
+    print(result)
+finally:
+    print("This will always execute.")
