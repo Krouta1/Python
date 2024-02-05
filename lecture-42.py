@@ -10,6 +10,7 @@ students_two = [("Sandy","F",60),
                 ("Lucy","E",24),
                 ("Tom","A",11),
                 ("Zara","B",30)]
-students_two.sort
-for i in sorted_students:
+#students_two.sort() # sort by first element
+students_two.sort(key = lambda x: x[1],reverse=True) # sort by third element
+for i in students_two:
     print(i)
